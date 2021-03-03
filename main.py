@@ -64,7 +64,7 @@ if opt == "Woche":
 
 if opt == "Thema":
     ar.empty()
-    name = ar.selectbox("Thema: ", ["-", *map_dict.values()], index=0)
+    name = ar.selectbox("Thema: ", ["-", *list(set(map_dict.values()))], index=0)
     if name != "-":
         img_list = remove_all(img_list)
         found_imgs = []
